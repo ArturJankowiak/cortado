@@ -718,7 +718,8 @@
 
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
-                <form action="#">
+                <form role="form"
+                      enctype="multipart/form-data" id="actionForm" action="contactForm.php" method="post">
                     <div class="row">
                         <div class="col-lg-6 form-group">
                             <input
@@ -750,7 +751,7 @@
                     <div class="row">
                         <div class="col-lg-12 form-group">
                   <textarea
-                          id="message"
+                          id="msg"
                           cols="30"
                           rows="7"
                           class="form-control"
