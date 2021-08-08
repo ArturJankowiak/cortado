@@ -1,19 +1,25 @@
 <?php
-require_once('PHPMailerAutoload.php'); # patch where is PHPMailer / ścieżka do PHPMailera
+require("PHPMailer.php");
+require("SMTP.php");
+require("Exception.php");
 
-$mail = new PHPMailer;
+echo !extension_loaded('openssl')?"Not Available":"Available";
+
+$mail = new PHPMailer\PHPMailer\PHPMailer();
 $mail->CharSet = "UTF-8";
 
+$mail->SMTPDebug = 1;
+
 $mail->IsSMTP();
-$mail->Host = 'smtp.pl'; #SMTP
+$mail->Host = 'ssl://smtp.gmail.com'; #SMTP
 $mail->Port = 465; # Gmail SMTP port
 $mail->SMTPAuth = true; # Enable SMTP authentication / Autoryzacja SMTP
-$mail->Username = "mail"; # Gmail username (e-mail) / Nazwa użytkownika
-$mail->Password = "haslo"; # Gmail password / Hasło użytkownika
+$mail->Username = "cortado.craft@gmail.com"; # Gmail username (e-mail) / Nazwa użytkownika
+$mail->Password = "cortado.craft63"; # Gmail password / Hasło użytkownika
 $mail->SMTPSecure = 'ssl';
 
 $mail->FromName = 'Formularz kontaktowy'; # Sender name
-$mail->AddAddress('odbiorca@gmail.com', 'Formularz kontaktowy'); # # Recipient (e-mail address + name) / Odbiorca (adres e-mail i nazwa)
+$mail->AddAddress('cortado.craft@gmail.com', 'Formularz kontaktowy'); # # Recipient (e-mail address + name) / Odbiorca (adres e-mail i nazwa)
 
 $mail->IsHTML(true); # Email @ HTML
 
@@ -36,5 +42,5 @@ $mail->IsHTML(true); # Email @ HTML
     echo 'Mailer Error: ' . $mail->ErrorInfo;
     exit;
     }
-header("Location:zapytanie-wyslane.html")
+header("Location:wiadomosc-podziekowanie.html")
 ?>

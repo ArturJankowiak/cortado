@@ -681,22 +681,26 @@
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
                 <form role="form"
-                      enctype="multipart/form-data" id="actionForm" action="contactForm.php" method="post">
+                      enctype="multipart/form-data" id="actionForm" action="./contactForm.php" method="post">
                     <div class="row">
                         <div class="col-lg-6 form-group">
                             <input
                                     id="firstname"
+                                    name="firstname"
                                     type="text"
                                     class="form-control"
                                     placeholder="Imię"
+                                    required
                             />
                         </div>
                         <div class="col-lg-6 form-group">
                             <input
                                     id="surname"
+                                    name="surname"
                                     type="text"
                                     class="form-control"
                                     placeholder="Nazwisko"
+                                    required
                             />
                         </div>
                     </div>
@@ -704,9 +708,11 @@
                         <div class="col-lg-12 form-group">
                             <input
                                     id="email"
+                                    name="email"
                                     type="email"
                                     class="form-control"
                                     placeholder="Adres email"
+                                    required
                             />
                         </div>
                     </div>
@@ -714,10 +720,12 @@
                         <div class="col-lg-12 form-group">
                   <textarea
                           id="msg"
+                          name="msg"
                           cols="30"
                           rows="7"
                           class="form-control"
                           placeholder="Napisz wiadomość..."
+                          required
                   ></textarea>
                         </div>
                     </div>
