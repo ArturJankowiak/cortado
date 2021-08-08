@@ -224,6 +224,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   transform: translate(-50%, -50%);
 }
 
+.service-icon {
+  width: 40px;
+}
+
 .logo {
   font-size: 24px;
   color: #ffffff;
@@ -1678,6 +1682,9 @@ figure.dotted-bg:before {
   max-width: 500px;
   text-align: center;
   margin-bottom: 30px;
+}
+.testimonial .img-table {
+  max-height: 200px;
 }
 .testimonial .name {
   font-size: 18px;
